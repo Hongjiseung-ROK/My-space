@@ -1,0 +1,109 @@
+/* 기본 스타일 초기화 및 폰트 설정 */
+:root {
+    --primary-color: #2c3e50; /* 주 색상 (짙은 남색) */
+    --secondary-color: #3498db; /* 강조 색상 (푸른색) */
+    --background-color: #ecf0f1; /* 배경색 (밝은 회색) */
+    --text-color: #34495e; /* 기본 텍스트 색상 */
+    --card-bg-color: #ffffff; /* 카드 배경색 (흰색) */
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 가독성 좋은 한글 폰트 우선 */
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth; /* 부드러운 스크롤 이동 효과 */
+}
+
+/* 1. 영웅 섹션: 첫인상을 결정 */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg'); /* 배경 이미지 위에 어두운 필터 적용 */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh; /* 화면 전체 높이 차지 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* 부드럽게 나타나는 효과 */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 2. 상단 고정 네비게이션 */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    transition: color 0.3s ease; /* 색상 변경 시 부드러운 전환 */
+}
+
+.sticky-nav a:hover {
+    color: var(--secondary-color); /* 마우스 올렸을 때 색상 변경 */
+}
+
+/* 3. 콘텐츠 섹션 공통 스타일 */
+.content-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 입체감을 주는 그림자 */
+    opacity: 0; /* 기본적으로는 보이지 않게 */
+    transform: translateY(20px); /* 아래에서 위로 올라오는 효과 준비 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 스크롤 시 나타나는 효과를 위한 클래스 */
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 4. 프로젝트 카드 디자인 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 그리드 */
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 확대 및 그림자 효과 */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* 마우스 올리면 살짝 위로 이동 */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* 애니메이션 키프레임 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
