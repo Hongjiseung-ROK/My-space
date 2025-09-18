@@ -3,54 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍지승 | 포트폴리오</title>
+    <title>[Your Name] - AI Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="hero-text">
-            <h1>안녕하세요, 홍지승입니다.</h1>
-            <p>MS ai school 8기 학생입니다.</p>
-        </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="nav-logo">[Your Initial or Logo]</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="#about">소개</a></li>
-            <li><a href="#projects">프로젝트</a></li>
-            <li><a href="#contact">연락처</a></li>
-        </ul>
-    </nav>
-
     <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-headline">복잡한 데이터 속에서<br>가치를 찾는 AI 엔지니어.</h1>
+                <p class="hero-subheadline">저는 기술을 통해 인간의 잠재력을 확장하는 문제에 집중합니다.</p>
+                <a href="#projects" class="hero-button">프로젝트 보기</a>
+            </div>
+        </section>
+
         <section id="about" class="content-section">
-            <h2>소개 (About Me)</h2>
-            <p>이곳에 당신의 철학과 비전, 그리고  열정을 담아보세요. </p>
+            <h2>About Me</h2>
+            <p>
+                저는 계산화학(Computational Chemistry)에 대한 깊은 이해를 바탕으로, 복잡한 과학적 문제 해결을 위한 머신러닝 모델을 설계하고 개발합니다. 
+                단순한 코드 작성을 넘어, 근본적인 원리를 파고들어 가장 효율적이고 정확한 솔루션을 찾는 데서 성취감을 느낍니다.
+            </p>
         </section>
 
         <section id="projects" class="content-section">
-            <h2>프로젝트 (Projects)</h2>
+            <h2>Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
-                    <h3>프로젝트 1</h3>
-                    <p>프로젝트에 대한 간략한 설명</p>
+                <article class="project-card">
+                    <img src="path/to/your/project-image1.jpg" alt="Project 1 Screenshot" class="project-image">
+                    <h3>Project Title 1</h3>
+                    <p>분자 구조 예측을 위한 딥러닝 모델 개발. 정확도를 15% 향상시켰습니다.</p>
+                    <div class="project-links">
+                        <a href="[GitHub Repo Link]" target="_blank">GitHub</a>
+                        <a href="[Live Demo Link]" target="_blank">Live Demo</a>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <img src="path/to/your/project-image2.jpg" alt="Project 2 Screenshot" class="project-image">
+                    <h3>Project Title 2</h3>
+                    <p>대규모 데이터 처리를 위한 분산 컴퓨팅 파이프라인 구축. 처리 시간을 40% 단축했습니다.</p>
+                    <div class="project-links">
+                        <a href="[GitHub Repo Link]" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
                 </div>
-                <div class="project-card">
-                    <h3>프로젝트 2</h3>
-                    <p>프로젝트에 대한 간략한 설명</p>
-                </div>
-                 </div>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <h2>Get in Touch</h2>
+            <p>새로운 기회나 협업에 대해 언제나 열려있습니다. 편하게 연락 주세요.</p>
+            <div class="contact-links">
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://github.com/your-username" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            </div>
         </section>
     </main>
 
-    <footer id="contact">
-        <p>© 2025 Hong js. All rights reserved.</p>
-        <p>Email: your.email@example.com | GitHub: your-github</p>
+    <footer class="footer">
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
